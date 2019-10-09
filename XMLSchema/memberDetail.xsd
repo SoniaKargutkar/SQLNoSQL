@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- file name memberDetail.xsd -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="member_details">
+  <xsd:complexType>
+    <xsd:sequence>
+      <xsd:element name="family_name">
+        <xsd:complexType>
+          <xsd:attribute name="info_1" type="xsd:string" use="required"/>
+	      <xsd:attribute name="inof_2" type="xsd:string" use="required"/>
+	    </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="given_name">
+        <xsd:complexType>
+          <xsd:attribute name="notes_1" type="xsd:string" use="optional"/>
+	      <xsd:attribute name="notes_2" type="xsd:string" use="required"/>
+	    </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="member_number" type="xsd:integer"/>
+      <xsd:element name="security" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:element>
+
+</xsd:schema>

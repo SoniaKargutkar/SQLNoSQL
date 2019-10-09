@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- file name: product.xsd -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="product">
+  <xsd:complexType>
+    <xsd:attribute name="prodID" type="xsd:positiveInteger"/>
+  </xsd:complexType>
+</xsd:element>
+
+</xsd:schema>

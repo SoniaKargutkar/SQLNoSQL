@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- file name: DTDDemo.xml -->
+
+<!DOCTYPE filmCategory [
+<!ELEMENT filmCategory (film+)>
+<!ELEMENT film (filmName, actor, director, introduction)>
+<!ATTLIST film category CDATA "action" year CDATA #REQUIRED>
+<!ENTITY introduction "it is a great kid's movie ...">
+<!ELEMENT filmName (#PCDATA)>
+<!ELEMENT actor (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT introduction (#PCDATA)>
+]>
+
+<filmCategory>
+	<film category="kid" year="1995">
+		<filmName>The Lion King</filmName>
+		<actor>Jonathan Thomas</actor>
+		<director>Roger Allers</director>
+		<introduction>&introduction;</introduction>
+	</film>
+	<film year="1996">
+		<filmName>101 Dalmatians</filmName>
+		<actor>Glenn Close</actor>
+		<director>Stephen Herek</director>
+		<introduction>It tells about a story of dogs...</introduction>
+	</film>
+	<!-- many other film records -->
+</filmCategory>

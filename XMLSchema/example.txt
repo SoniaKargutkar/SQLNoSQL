@@ -1,0 +1,9 @@
+<xsd:element name="member" type="personInfo"/>
+
+<xsd:complexType name="personInfo">
+  <xsd:sequence>
+	<xsd:element name="name" type="xsd:string"/>
+	<xsd:element name="age" type="xsd:integer"/>
+  </xsd:sequence>
+</xsd:complexType>
+

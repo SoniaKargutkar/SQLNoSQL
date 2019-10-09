@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- file name: entity1.xml -->
+
+<!DOCTYPE article [
+<!ELEMENT article (titlepage, introduction, section*)>
+<!ELEMENT titlepage (#PCDATA|subtitle)*>
+<!ELEMENT introduction (#PCDATA)>
+<!ELEMENT section (#PCDATA)>
+<!ELEMENT subtitle (#PCDATA)>
+<!ENTITY title "XML Introduction <subtitle>next generation web language</subtitle>">
+<!ENTITY introduction "XML comes from SGML and is simplified SGML ...">
+]>
+
+<article>
+	<titlepage>
+		title: &title;
+		author: xxx
+	</titlepage>
+	<introduction>&introduction;</introduction>
+	<section>1. HTML Limitation</section>
+	<section>2. XML</section>
+	<section>3. DTD</section>
+</article>

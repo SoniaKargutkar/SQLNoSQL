@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- file name: shoesize.xsd -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.w3schools.com"
+xmlns="http://www.w3schools.com">
+
+<xsd:element name="shoesize">
+  <xsd:complexType>
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:integer">
+        <xsd:attribute name="country" type="xsd:string"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+</xsd:element>
+
+</xsd:schema>

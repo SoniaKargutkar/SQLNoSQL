@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- file name myfamily.xml -->
+<persons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="myfamily.xsd">
+	<person>
+		<fullname>Hege Refsnes</fullname>
+		<childname>Cecilie</childname>
+	</person>
+	<person>
+		<fullname>Tove Refsnes</fullname>
+		<childname>Hege</childname>
+		<childname>stale</childname>
+		<childname>Jim</childname>
+		<childname>Borge</childname>
+	</person>
+	<person>
+		<fullname>Stale Refsnes</fullname>
+	</person>
+</persons>

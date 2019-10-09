@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- file name: recipes.xsd -->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:r="http://recipes.org"
+        targetNamespace="http://recipes.org"
+        elementFormDefault="qualified">
+
+  <element name="collection">
+    <complexType>
+      <sequence>
+        <element name="description" type="r:anycontent"/>
+        <element ref="r:recipe" minOccurs="0" maxOccurs="unbounded"/> 
+      </sequence>
+    </complexType>
+  </element>
+
+  <complexType name="anycontent" mixed="true">
+    <sequence>
+      <any minOccurs="0" maxOccurs="unbounded" 
+           processContents="skip" namespace="##other"/>
+    </sequence>
+  </complexType>
+
+  <element name="recipe">
+    <complexType>
+      <sequence>
+        <element name="title" type="string"/>
+        <element ref="r:ingredient" minOccurs="0" maxOccurs="unbounded"/>
+        <element ref="r:preparation"/>
+        <element name="comment" minOccurs="0" type="string"/>
+        <element name="nutrition">
+          <complexType>
+            <attribute name="protein" type="r:nonNegativeDecimal" use="required"/>
+            <attribute name="carbohydrates" type="r:nonNegativeDecimal" use="required"/>
+            <attribute name="fat" type="r:nonNegativeDecimal" use="required"/>
+            <attribute name="calories" type="r:nonNegativeDecimal" use="required"/>
+            <attribute name="alcohol" type="r:nonNegativeDecimal" use="optional"/>
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+
+  <element name="preparation">
+    <complexType>
+      <sequence>
+        <element name="step" type="string" minOccurs="0" maxOccurs="unbounded"/>
+      </sequence>
+    </complexType>
+  </element>
+
+  <element name="ingredient">
+    <complexType>
+      <sequence>
+        <element ref="r:ingredient" minOccurs="0" maxOccurs="unbounded"/>
+        <element ref="r:preparation" minOccurs="0"/>
+      </sequence>
+      <attribute name="name" use="required"/>
+      <attribute name="amount" use="optional">
+        <simpleType>
+          <union>
+            <simpleType>
+              <restriction base="string">
+                <enumeration value="*"/>
+              </restriction>
+            </simpleType>
+            <simpleType>
+              <restriction base="r:nonNegativeDecimal"/>
+            </simpleType>
+          </union>
+        </simpleType>
+      </attribute>
+      <attribute name="unit" use="optional"/>
+    </complexType>
+  </element>
+
+  <simpleType name="nonNegativeDecimal">
+    <restriction base="decimal">
+      <minInclusive value="0"/>
+    </restriction>
+  </simpleType>
+
+</schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- file name po1.xml -->
+<apo:purchaseOrder xmlns:apo="E:\Ding@IFI\Education\Course\SW_AI\XML-Schema\po1.xsd" orderDate="1999-10-20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.com/PO1 E:\Ding@IFI\Education\Course\SW_AI\XML-Schema\po1.xsd">
+	<shipTo country="US">
+		<name>Alice Smith</name>
+		<street>123 Maple Street</street>
+		<!-- etc. -->
+	</shipTo>
+	<billTo country="US">
+		<name>Robert Smith</name>
+		<street>8 Oak Avenue</street>
+		<!-- etc. -->
+	</billTo>
+	<apo:comment>Hurry, my lawn is going wild</apo:comment>
+	<!-- etc. -->
+</apo:purchaseOrder>

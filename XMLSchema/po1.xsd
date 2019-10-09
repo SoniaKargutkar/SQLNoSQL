@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- file name: po1.xsd -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:po="http://www.example.com/PO1" targetNamespace="http://www.example.com/PO1" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xsd:element name="purchaseOrder" type="po:PurchaseOrderType"/>
+	<xsd:element name="comment" type="xsd:string"/>
+	<xsd:complexType name="PurchaseOrderType">
+		<xsd:sequence>
+			<xsd:element name="shipTo" type="po:USAddress"/>
+			<xsd:element name="billTo" type="po:USAddress"/>
+			<!-- etc. -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="USAddress">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="street" type="xsd:string"/>
+			<!-- etc. -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- etc. -->
+</xsd:schema>

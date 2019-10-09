@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- file name: myfamily.xsd -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:element name="persons">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="person" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="fullname" type="xsd:string"/>
+							<xsd:element name="childname" type="xsd:string" minOccurs="0" maxOccurs="5"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

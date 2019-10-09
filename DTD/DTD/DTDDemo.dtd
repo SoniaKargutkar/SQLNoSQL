@@ -1,0 +1,10 @@
+<!-- file name: DTDDemo.dtd -->
+
+<!ELEMENT filmCategory (film+)>
+<!ELEMENT film (filmName, actor, director, introduction)>
+<!ATTLIST film category CDATA "action" year CDATA #REQUIRED>
+<!ENTITY introduction "it tells the story about the history ...">
+<!ELEMENT filmName (#PCDATA)>
+<!ELEMENT actor (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT introduction (#PCDATA)>

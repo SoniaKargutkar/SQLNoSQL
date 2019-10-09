@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="first.css" type="text/css" ?>
+<!-- file name: namespace2.xml -->
+<data xmlns:HTML="http://www.w3.org/TR/XHTML1">
+  <book>
+	<title>XML Introduction</title>
+	<HTML:a href="mailto:aa@yahoo.com">
+		<author>Tom</author>
+	</HTML:a>
+	<picture>
+	<HTML:img src="logo.gif" width="80" height="80">
+	</HTML:img>
+	</picture>
+  </book>
+</data>
